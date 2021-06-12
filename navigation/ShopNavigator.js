@@ -1,8 +1,8 @@
-import { createStackNavigator, createAppContainer } from 'react-navivation';
+import { createStackNavigator, createAppContainer } from 'react-navigation';
 import { Platform } from 'react-native';
 
 
-import ProductsOverviewScreen from '../screen/shop/ProductsOverviewScreen';
+import ProductsOverviewScreen from '../screens/shop/ProductsOverviewScreen';
 import Colors from '../constants/Colors';
 
 

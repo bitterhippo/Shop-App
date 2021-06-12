@@ -2,7 +2,7 @@ import React from 'react';
 import { FlatList, Text } from 'react-native';
 import { useSelector } from 'react-redux';
 
-const ProductOverviewScreen = props => {
+const ProductsOverviewScreen = props => {
 
   const products = useSelector(state => state.products.availableProducts);
 
@@ -14,4 +14,4 @@ const ProductOverviewScreen = props => {
   )
 };
 
-export default ProductOverviewScreen;
+export default ProductsOverviewScreen;
