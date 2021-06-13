@@ -4,12 +4,13 @@ import { View, Text, Image, StyleSheet, Button } from 'react-native';
 import Colors from '../../constants/Colors';
 
 const ProductItem = ({ title, image, price, onViewDetail, onAddToCart }) => {
+
   return (
     <View style={styles.product}>
       <View style={styles.imageContainer}>
         <Image
           style={styles.image}
-          source={{ uri: image }} />
+          source={{ uri: `${image}` }} />
       </View>
       <View style={styles.details}>
         <Text style={styles.title}> {title} </Text>
@@ -38,8 +39,10 @@ const styles = StyleSheet.create({
     margin: 20,
   },
   image: {
-    width: '100%',
-    height: '100%',
+    width: 300,
+    height: 150,
+    marginHorizontal: 'auto',
+    objectFit: 'cover'
   },
   title: {
     fontSize: 18,
