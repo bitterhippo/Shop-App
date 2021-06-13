@@ -22,9 +22,9 @@ const ProductsNavigator = createStackNavigator(
 {
   defaultNavigationOptions: {
     headerStyle: {
-      backgroundColors: Platform.OS === 'android' ? Colors.primary : ''
+      backgroundColor: Colors.primary 
     },
-    headerTintColor: Platform.OS === 'android' ? 'white' : Colors.primary
+    headerTintColor: 'white'
   }
 });
 
