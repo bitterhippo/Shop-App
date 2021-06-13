@@ -14,9 +14,9 @@ const ProductsOverviewScreen = props => {
       keyExtractor={item => item.id}
       renderItem={itemData =>
         <ProductItem
-          title={itemData.title}
-          price={itemData.price}
-          image={itemData.image}
+          title={itemData.item.title}
+          price={itemData.item.price}
+          image={itemData.item.image}
         />
       }
     />

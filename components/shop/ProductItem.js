@@ -1,21 +1,29 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, Button } from 'react-native';
 
+import Colors from '../../constants/Colors';
+
 const ProductItem = ({ title, image, price, onViewDetail, onAddToCart }) => {
   return (
-    <View>
-      <Image  
-      style={styles.image} 
-      source={{uri: image}}/>
-      <Text style={styles.title}> {title} </Text>
-      <Text style={styles.price}> {price} </Text>
+    <View style={styles.product}>
+      <View style={styles.imageContainer}>
+        <Image
+          style={styles.image}
+          source={{ uri: image }} />
+      </View>
+      <View style={styles.details}>
+        <Text style={styles.title}> {title} </Text>
+        <Text style={styles.price}> {price} </Text>
+      </View>
       <View style={styles.actions}>
-        <Button 
-        title="View Details" 
-        onPress={onViewDetail}/>
-        <Button 
-        title="to Cart" 
-        onPress={onAddToCart}/>
+        <Button
+          color={Colors.primary}
+          title="View Details"
+          onPress={onViewDetail} />
+        <Button
+          color={Colors.primary}
+          title="to Cart"
+          onPress={onAddToCart} />
       </View>
     </View>
   )
@@ -28,10 +36,10 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     height: 300,
     margin: 20,
-  }, 
+  },
   image: {
     width: '100%',
-    height: '60%',
+    height: '100%',
   },
   title: {
     fontSize: 18,
@@ -44,7 +52,21 @@ const styles = StyleSheet.create({
   actions: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItem: 'center'
+    alignItem: 'center',
+    height: '25%',
+    paddingHorizontal: 20
+  },
+  details: {
+    alignItems: 'center',
+    height: '15%',
+    padding: 10
+  },
+  imgageContainer: {
+    width: '100%',
+    height: '60%',
+    borderTopLeftRadius: 10,
+    BorderTopRightRadius: 10,
+    overflow: 'hidden'
   }
 });
 
