@@ -38,13 +38,13 @@ const ProductsOverviewScreen = props => {
 
 ProductsOverviewScreen.navigationOptions = {
   headerTitle: 'All Products',
-  headerRight: <HeaderButtons HeaderButtonComponent={HeaderButton}>
-    <Item 
-    title='Cart' 
-    iconName={'md-cart'}
-    onPress={() => {}}
-    />
-  </HeaderButtons>
+  headerRight: () =>
+    <HeaderButtons HeaderButtonComponent={HeaderButton}>
+      <Item
+        title='Cart'
+        iconName={'md-cart'}
+      />
+    </HeaderButtons>
 };
 
 export default ProductsOverviewScreen;

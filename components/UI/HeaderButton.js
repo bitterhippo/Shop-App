@@ -1,10 +1,10 @@
 import React from 'react';
-import { headerButton } from 'react-navigation-header-buttons';
+import { HeaderButton } from 'react-navigation-header-buttons';
 import { Ionicons } from '@expo/vector-icons';
 
 import Colors from '../../constants/Colors';
 
-const HeaderButton = props => {
+const CustomHeaderButton = props => {
   return <HeaderButton 
   {...props} 
   IconComponent={Ionicons} 
@@ -13,5 +13,5 @@ const HeaderButton = props => {
   />;
 };
 
-export default HeaderButton;
+export default CustomHeaderButton;
 
