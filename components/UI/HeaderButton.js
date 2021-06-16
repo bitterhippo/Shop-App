@@ -1,14 +1,18 @@
 import React from 'react';
+import { TouchableOpacity } from 'react-native';
 import { FiShoppingCart } from 'react-icons/fi';
+
 
 import Colors from '../../constants/Colors';
 
 const CustomHeaderButton = props => {
   return (
-  <FiShoppingCart 
-    size={23}
-    color={Colors.pirmary}
-  />
+    <TouchableOpacity onPress={() => {console.log('lol')}}>
+      <FiShoppingCart
+        size={23}
+        style={{ marginRight: 20, color: 'white' }}
+      />
+    </TouchableOpacity>
   )
 }
 
