@@ -5,7 +5,7 @@ import { Platform } from 'react-native';
 //Screens
 import ProductsOverviewScreen from '../screens/shop/ProductsOverviewScreen';
 import ProductDetailScreen from '../screens/shop/ProductDetailScreen';
-
+import CartScreen from '../screens/shop/CartScreen';
 
 
 //non-screens
@@ -16,7 +16,8 @@ const ProductsNavigator = createStackNavigator(
   //Navigation Identifiers
   {
   ProductsOverview: ProductsOverviewScreen,
-  ProductDetail: ProductDetailScreen
+  ProductDetail: ProductDetailScreen,
+  Cart: CartScreen,
 }, 
   //Display configuration options
 {

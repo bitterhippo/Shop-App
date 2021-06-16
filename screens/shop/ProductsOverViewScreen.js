@@ -36,10 +36,14 @@ const ProductsOverviewScreen = props => {
   )
 };
 
-ProductsOverviewScreen.navigationOptions = {
-  headerTitle: 'All Products',
-  headerRight: () =>
-    <CustomHeaderButton />
+ProductsOverviewScreen.navigationOptions = navData => {
+  return {
+    headerTitle: 'All Products',
+    headerRight: () =>
+      <CustomHeaderButton onPush={() => navData.navigation.navigate('Cart')} />
+  }
 };
+
+
 
 export default ProductsOverviewScreen;
