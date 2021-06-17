@@ -15,7 +15,7 @@ export default (state = initialState, action) => {
 
       if (state.items[addedProduct.id]) {
         //This item already exists in the cart. Quanity += 1
-        const updateCartItem = new CartItem(
+        const updatedCartItem = new CartItem(
           state.items[addedProduct.id].quantity + 1,
           prodPrice,
           prodTitle,
@@ -24,7 +24,7 @@ export default (state = initialState, action) => {
 
         return {
           ...state,
-          items: { ...state.items, [addedProduct.id]: UpdatedCartItem },
+          items: { ...state.items, [addedProduct.id]: updatedCartItem },
           totalAmount: state.totalAmount + prodPrice
         }
 
