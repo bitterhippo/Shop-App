@@ -10,10 +10,11 @@ const ProductItem = ({ title, image, price, onViewDetail, onAddToCart }) => {
     TouchableCmp = TouchableNativeFeedback
   }
 
-  console.log(onAddToCart)
-
   return (
-    <TouchableCmp onPress={onViewDetail} useForeground>
+    <TouchableCmp 
+    style={styles.wrapper}
+    onPress={onViewDetail} 
+    useForeground>
       <View style={styles.product}>
         <View style={styles.imageContainer}>
           <Image
@@ -26,6 +27,7 @@ const ProductItem = ({ title, image, price, onViewDetail, onAddToCart }) => {
         </View>
         <View style={styles.actions}>
           <Button
+            style={styles.button}
             color={Colors.primary}
             title="View Details"
             onPress={onViewDetail} />
@@ -40,6 +42,9 @@ const ProductItem = ({ title, image, price, onViewDetail, onAddToCart }) => {
 };
 
 const styles = StyleSheet.create({
+  wrapper: {
+    maxHeight: 350
+  },
   product: {
     elevation: 5,
     borderRadius: 10,
@@ -79,7 +84,7 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 10,
     BorderTopRightRadius: 10,
     overflow: 'hidden'
-  }
+  },
 });
 
 export default ProductItem;
