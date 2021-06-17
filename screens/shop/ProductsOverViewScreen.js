@@ -27,7 +27,7 @@ const ProductsOverviewScreen = props => {
               productTitle: itemData.item.title
             })
           }}
-          onAddtoCart={() => {
+          onAddToCart={() => {
             dispatch(cartActions.addToCart(itemData.item));
           }}
         />

@@ -10,6 +10,8 @@ const ProductItem = ({ title, image, price, onViewDetail, onAddToCart }) => {
     TouchableCmp = TouchableNativeFeedback
   }
 
+  console.log(onAddToCart)
+
   return (
     <TouchableCmp onPress={onViewDetail} useForeground>
       <View style={styles.product}>
