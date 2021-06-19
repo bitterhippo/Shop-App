@@ -9,7 +9,8 @@ import ProductsNavigator from './navigation/ShopNavigator';
 
 const rootReducer = combineReducers({
   products: productReducer,
-  cart: cartReducer
+  cart: cartReducer,
+  orders: ordersReducer
 });
 
 const store = createStore(rootReducer);
