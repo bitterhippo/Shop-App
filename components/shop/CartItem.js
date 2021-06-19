@@ -1,17 +1,17 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
-const CartItem = props => {
+const CartItem = ({ title, amount, quantity, onRemove }) => {
   return (
     <View style={styles.cartItem}>
       <View style={styles.itemData}>
-        <Text style={styles.quantity}>QTY</Text><Text style={styles.title}>TITLE</Text>
+        <Text style={styles.quantity}>{quantity}</Text><Text style={styles.title}>{title}</Text>
       </View>
       <View>
-        <Text>AMOUNT</Text>
+        <Text>{amount}</Text>
       </View>
       <TouchableOpacity
-        onPress={props.onRemove}
+        onPress={onRemove}
         style={styles.deleteButton}
       >
         <Text>Trash Bin</Text>
