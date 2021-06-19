@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 
 import productReducer from './store/reducers/products';
 import cartReducer from './store/reducers/cart';
+import ordersReducer from './store/reducers/orders';
 import ProductsNavigator from './navigation/ShopNavigator';
 
 const rootReducer = combineReducers({
