@@ -10,12 +10,15 @@ import CustomHeaderButton from '../../components/UI/HeaderButton';
 const ProductsOverviewScreen = props => {
 
   const products = useSelector(state => state.products.availableProducts);
+
   const dispatch = useDispatch();
 
   return (
     <FlatList
+      //The array that values will be extracted from
       data={products}
       keyExtractor={item => item.id}
+      //How the items that are extracted will be rendered
       renderItem={itemData =>
         <ProductItem
           title={itemData.item.title}
