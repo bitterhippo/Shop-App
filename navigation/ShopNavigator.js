@@ -17,18 +17,39 @@ import Colors from '../constants/Colors';
 const ProductsNavigator = createStackNavigator(
   //Navigation Identifiers
   {
-  ProductsOverview: ProductsOverviewScreen,
-  ProductDetail: ProductDetailScreen,
-  Cart: CartScreen,
-}, 
+    ProductsOverview: ProductsOverviewScreen,
+    ProductDetail: ProductDetailScreen,
+    Cart: CartScreen,
+  },
   //Display configuration options
-{
+  {
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: Colors.primary
+      },
+      headerTintColor: 'white'
+    }
+  });
+
+const OrdersNavigator = createStackNavigator({
+  Orders: OrdersScreen
+}, {
   defaultNavigationOptions: {
     headerStyle: {
-      backgroundColor: Colors.primary 
+      backgroundColor: Colors.primary
     },
     headerTintColor: 'white'
   }
 });
 
-export default createAppContainer(ProductsNavigator);
+const ShopNavigator = createDrawerNavigator({
+  Products: ProductsNavigator,
+  Orders: OrdersNavigator,
+}, {
+  contentOptions: {
+    activeTintColor: Colors.primary
+  }
+});
+
+
+export default createAppContainer(ShopNavigator);
