@@ -43,9 +43,13 @@ ProductsOverviewScreen.navigationOptions = navData => {
   return {
     headerTitle: 'All Products',
     headerRight: () =>
-      <CustomHeaderButton onPush={() => navData.navigation.navigate('Cart')} />
+      <CustomHeaderButton onPush={() => navData.navigation.navigate('Cart')} />,
+    headerLeft: () =>
+      <CustomHeaderButton onPush={() => navData.navigation.toggleDrawer()
+      } />
   }
 };
+
 
 
 

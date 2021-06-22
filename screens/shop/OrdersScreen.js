@@ -14,8 +14,10 @@ const OrdersScreen = props => {
   />
 };
 
-OrdersScreen.navigationOptions ={
-  headerTitle: 'Your Orders'
+OrdersScreen.navigationOptions = navData => {
+  return {
+    headerTitle: 'Your Orders'
+  }
 };
 
 export default OrdersScreen;
