@@ -31,25 +31,33 @@ const ProductsNavigator = createStackNavigator(
     }
   });
 
-const OrdersNavigator = createStackNavigator({
-  Orders: OrdersScreen
-}, {
-  defaultNavigationOptions: {
-    headerStyle: {
-      backgroundColor: Colors.primary
-    },
-    headerTintColor: 'white'
-  }
-});
+const OrdersNavigator = createStackNavigator(
+  {
+    Orders: OrdersScreen
+  },
+  {
+      navigationOptions: {
+        //This need to be an actual icon
+        drawerIcon: drawerConfig => <Text>LOL</Text>
+      },
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: Colors.primary
+      },
+      headerTintColor: 'white'
+    }
+  });
 
-const ShopNavigator = createDrawerNavigator({
-  Products: ProductsNavigator,
-  Orders: OrdersNavigator,
-}, {
-  contentOptions: {
-    activeTintColor: Colors.primary
-  }
-});
+const ShopNavigator = createDrawerNavigator(
+  {
+    Products: ProductsNavigator,
+    Orders: OrdersNavigator,
+  },
+  {
+    contentOptions: {
+      activeTintColor: Colors.primary
+    }
+  });
 
 
 export default createAppContainer(ShopNavigator);
